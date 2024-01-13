@@ -1,0 +1,1 @@
+export const REQUEST_RX_DOWNLOAD_TOKEN = '.requestRxDownloadToken';

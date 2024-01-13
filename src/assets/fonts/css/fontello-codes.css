@@ -1,0 +1,5 @@
+
+.icon-users:before { content: '\e800'; } /* '' */
+.icon-dashboard:before { content: '\e801'; } /* '' */
+.icon-cogwheel:before { content: '\e802'; } /* '' */
+.icon-plus:before { content: '\e803'; } /* '' */

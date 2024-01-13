@@ -1,0 +1,273 @@
+@import './mixins';
+/* utilities.scss */
+
+// Spacing
+$spacing-unit: 8px;
+
+@for $i from 0 through 5 {
+  .m-#{$i} { margin: $spacing-unit * $i; }
+  .mt-#{$i} { margin-top: $spacing-unit * $i; }
+  .mr-#{$i} { margin-right: $spacing-unit * $i; }
+  .mb-#{$i} { margin-bottom: $spacing-unit * $i; }
+  .ml-#{$i} { margin-left: $spacing-unit * $i; }
+
+  .p-#{$i} { padding: $spacing-unit * $i!important; }
+  .pt-#{$i} { padding-top: $spacing-unit * $i; }
+  .pr-#{$i} { padding-right: $spacing-unit * $i; }
+  .pb-#{$i} { padding-bottom: $spacing-unit * $i; }
+  .pl-#{$i} { padding-left: $spacing-unit * $i; }
+}
+
+// Text utilities
+.text__left { text-align: left; }
+.text__center { text-align: center; }
+.text__right { text-align: right; }
+.text__justify { text-align: justify; }
+
+.text__uppercase { text-transform: uppercase; }
+.text__lowercase { text-transform: lowercase; }
+.text__capitalize { text-transform: capitalize; }
+
+.text__muted { color: $gray-600; }
+.text__primary { color: $primary; }
+.text__secondary { color: $secondary; }
+.text__tertiary { color: $tertiary; }
+
+// Display utilities
+.d__none { display: none; }
+.d__inline { display: inline; }
+.d__inline-block { display: inline-block; }
+.d__block { display: block; }
+.d__flex { display: flex!important; }
+.d__inline-flex { display: inline-flex; }
+
+// Flex utilities
+.flex__row { flex-direction: row; }
+.flex__column { flex-direction: column; }
+.flex__row__reverse { flex-direction: row-reverse; }
+.flex__column__reverse { flex-direction: column-reverse; }
+
+.justify__content__start { justify-content: flex-start; }
+.justify__content__end { justify-content: flex-end; }
+.justify__content__center { justify-content: center; }
+.justify__content__between { justify-content: space-between; }
+.justify__content__around { justify-content: space-around; }
+
+.align__items__start { align-items: flex-start; }
+.align__items__end { align-items: flex-end; }
+.align__items__center { align-items: center; }
+.align__items__baseline { align-items: baseline; }
+.align__items__stretch { align-items: stretch; }
+
+.pointer__cursor {
+  cursor: pointer;
+}
+.gap__1 {
+  gap: 1rem;
+}
+
+// Position utilities
+.pos__static { position: static; }
+.pos__relative { position: relative; }
+.pos__absolute { position: absolute; }
+.pos__fixed { position: fixed; }
+.pos__sticky { position: sticky; }
+
+.border__radius__medium {
+  border-radius: 15px!important;
+}
+.border__radius__large {
+  border-radius: 25px!important;
+}
+// containers
+.container
+{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1
+{
+  font-size: 2.25rem;
+}
+h1 {
+  @include responsive-font(1.5rem, 2.25rem);
+}
+h2
+{
+  @include responsive-font(1.35rem, 1.875rem);
+}
+li,p
+{
+  @include responsive-font(1rem, 1.15rem);
+}
+i{
+  color: #4D4D4D;
+}
+
+p,li,span {
+  color: $gray-700;
+  }
+// Other utilities
+.icon-2x {
+  font-size: 2em;
+}
+
+.icon-3x {
+  font-size: 2.5em;
+}
+.icon-4x {
+  font-size: 4em;
+}
+.w__100
+{
+  width: 100%!important;
+}
+.text__link
+{
+  color: $primary;
+  font-weight: bold;
+}
+
+.icon__bg
+{
+    width: 5rem;
+    height: 5rem;
+    background-color: $light-gray;
+    border-radius: 50%;
+    @include flex-center();
+    margin: 0 auto;
+    font-size: 1.8rem;
+    display: none;
+    @include respond-to('large') 
+    {
+        display: flex;
+    }
+}
+.error{
+  color: $danger ;
+  text-align: left;
+  input{
+    background-color: $danger-light!important;
+    color: $danger!important ;
+  }
+  i{
+    color: $danger!important ;
+  }
+}
+
+// *********Progress bar*********
+.progress__bar__comp
+{
+.progress__container 
+{
+  width: 100%;
+  height: 8px;
+  background-color: $white;
+  border-radius: 4px;
+  margin-top: .5rem;
+  .progress__bar {
+    height: 100%;
+    width: 0%; /* Initial width set to 0% */
+    background-color: $primary; /* Blue color */
+    border-radius: 4px;
+    transition: width .22s ease-in-out;
+  }
+}
+.progress__counter{
+  text-align: left;
+  display: block;
+  margin-top: .6rem;
+}
+}
+.hide__mob{
+  display: none;
+  @include respond-to('large') 
+  {
+    display: block;
+  }
+}
+
+.heading__buddy 
+{
+  color: $white;
+  position: relative;
+  font-size: 2rem;
+  width: fit-content;
+  margin-bottom: 2rem;
+  &::after {
+    content: "";
+    width: 70%;
+    height: 5px;
+    background-color: $white;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+}
+.heading__buddy.dark {
+  color: #555;
+  &::after {
+    background-color: $primary;
+  }
+}
+
+/* This will change the scrollbar for the entire page */
+::-webkit-scrollbar {
+  width: .6rem; /* Width of the scrollbar */
+}
+
+/* Track or progress bar */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+/* Handle or slider */
+::-webkit-scrollbar-thumb {
+  background: $light-gray; /* Color of the slider */
+}
+
+/* Handle or slider on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the slider on hover */
+}
+@import url('https://fonts.googleapis.com/css2?family=Allerta&family=Barlow:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+body {
+  font-family: 'Barlow', sans-serif;
+}
+
+.single-line {
+  white-space: nowrap;     
+  overflow: hidden;       
+  text-overflow: ellipsis;
+  width: 100%;            
+}
+
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.pagination-btn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+      background-color: #e0e0e0;
+  }
+}
+
+#paginationInfo {
+  font-size: 1rem;
+  color: #333;
+}
+* {
+  transition: .4s all ease-in-out!important;
+}

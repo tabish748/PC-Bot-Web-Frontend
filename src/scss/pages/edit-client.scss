@@ -1,0 +1,322 @@
+@use '../base/colors' as c;
+@import '../base/mixins';
+@import '../base/variables';
+
+.edit__client {
+    &--section {
+        width: 100%;
+        min-height: 500px;
+        background-color: c.$white;
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            background-color: c.$primary;
+            gap: 1.5rem;
+
+            &__tab {
+                text-align: center;
+                padding: 20px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                color: c.$white;
+                position: relative;
+                font-size: 1.1rem;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 5px;
+                    background-color: c.$secondary; // Color for the active tab's bottom border
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform 0.3s ease;
+                }
+
+                &--active::after {
+                    transform: scaleX(1); // Full width for the active tab
+                }
+            }
+        }
+
+        .tabs-content {
+            &__item {
+                padding: 1.5rem;
+                display: none;
+
+                &--active {
+                    display: block;
+                }
+            }
+        }
+
+    }
+}
+
+.download-action-btn {
+    width: fit-content;
+    height: auto;
+    background-color: #4D4D4D;
+    color: c.$white;
+    border-radius: 25px;
+    border: none;
+    padding: 15px 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.accordian__content {
+    &--wrapper {
+        width: 100%;
+        padding: 20px;
+
+        .upload__document__text {
+            color: c.$secondary;
+            font-size: 1rem;
+        }
+
+        .file-upload {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hidden-input {
+            display: none;
+        }
+
+        .file-label,
+        #fileName {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+
+    }
+}
+
+.client_btn {
+    display: flex;
+    justify-self: flex-end;
+
+    button {
+        padding: .8rem 1.5rem;
+        font-size: 1.3rem;
+        border-radius: 55px !important;
+
+    }
+}
+
+#add_doc_btn {
+    button {
+        background-color: #4D4D4D;
+    }
+}
+
+// #upload_doc_wrapper, #add_text_wrapper {
+//     display: none;
+// }
+.file-row {
+    padding: 1rem 0;
+    border-bottom: thin solid #dedede;
+    max-width: 90%;
+}
+
+.file-row span {
+    max-width: 300px;
+}
+
+.ocr-content {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.ocr-row span,
+.ocr-row input {
+    width: 40%;
+    font-size: 1.1rem;
+}
+
+.ocr-row input {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.ocr-row button-action {
+    flex-shrink: 0; // This ensures the button does not shrink if there's not enough space
+    margin-left: auto; // This pushes the button to the far right
+    opacity: 0;
+    min-width: 100px;
+    button {
+        width: 100%;
+    }
+}
+
+.ocr-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1rem;
+
+}
+
+.ocr-row:hover {
+    button-action,button {
+        opacity: 1;
+    }
+}
+
+.ocr-row:nth-child(even) {
+    background-color: c.$primary-light;
+}
+
+
+.ocr-row:last-child {
+    border-bottom: none;
+}
+
+.ocr-key {
+    font-weight: normal;
+}
+
+.ocr-value {
+    margin-left: 10px;
+}
+
+#add_text_wrapper {
+    max-width: 400px;
+}
+
+
+#child_user_listing_container {
+    margin-top: 2rem;
+
+    .file-row {
+        background-color: #fcfcfc;
+        padding: 1rem;
+
+        .childForm {
+            position: relative;
+        }
+
+        button-action:nth-child(2) {
+            float: right;
+        }
+    }
+
+}
+
+.cross {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.view_txt_btn {
+    button {
+        padding: 12px 25px !important;
+        font-size: 16px;
+        background-color: #555;
+
+        span {
+            color: lightgray !important;
+        }
+    }
+}
+
+.master_doc_wrapper {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    p{
+        margin-top: 1rem;
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+    h4 {
+        margin-top: 1rem;
+        font-weight: normal;
+    }
+
+    ul {
+        margin-top: 1rem;
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+    }
+}
+
+.master_doc_li_key  {
+    min-width: 300px;
+    max-width: 300px;
+    display: block;
+}
+.master_doc_li_value  {
+    min-width: 300px;
+    max-width: 300px;
+    display: block;
+    margin-left: 30px;
+}
+.copy_btn_wrapper_master {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.master_doc_list_item:hover {
+    .copy_btn_wrapper_master {
+        button {
+            opacity: 1;
+            transition: .5s;
+        }
+    }
+}
+
+#maste_doc_btn.open {
+    #master_doc_arrow {
+        transform: rotate(90deg);
+        transition: .5s all ease-in-out;
+    }
+}
+
+#maste_doc_btn.open {
+    #master_doc_arrow {
+        transform: rotate(-180deg);
+        transition: .5s all ease-in-out;
+    }
+}
+
+// .master_doc_wrapper {
+//     height: 0;
+//     display: none;
+// }
+
+#maste_doc_btn.open~.master_doc_wrapper {
+    height: auto;
+    background-color: #fff;
+    transition: height 1s ease-in-out;
+    display: block;
+}
+
+.master_doc_download_btn {
+    button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.3rem;
+        border-radius: 55px !important;
+    }
+
+}

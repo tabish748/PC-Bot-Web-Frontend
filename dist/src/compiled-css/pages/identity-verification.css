@@ -1,0 +1,67 @@
+/* colors.scss */ /* variables.scss */ /* mixins.scss */
+.example {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rx__section {
+  max-width: 600px;
+  text-align: left;
+}
+@media (min-width: 992px) {
+  .rx__section {
+    text-align: center;
+  }
+}
+.rx__section form .calendar__box {
+  position: relative;
+}
+.rx__section form .calendar__box input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.rx__section form .calendar__box i {
+  color: #adb5bd;
+  position: absolute;
+  right: 1rem;
+  top: 2.5rem;
+}
+.rx__section form .icon-timer {
+  color: #008DFF !important;
+}
+.rx__section__left__seconds {
+  color: #008DFF;
+}
+.rx__section__left__seconds span {
+  color: #008DFF;
+}
+.rx__section__time__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  z-index: 10;
+}
+.rx__section__time__container i {
+  color: #008DFF;
+}

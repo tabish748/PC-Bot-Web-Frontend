@@ -1,0 +1,635 @@
+/* colors.scss */ /* variables.scss */ /* mixins.scss */
+.example {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* variables.scss */
+.pharmacy__section {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .pharmacy__section {
+    padding: 4rem;
+  }
+}
+.pharmacy__section .heading__buddy {
+  text-align: left;
+}
+@media (min-width: 992px) {
+  .pharmacy__section .heading__buddy {
+    text-align: center;
+  }
+}
+.pharmacy__prescription__section {
+  width: 100%;
+  margin-top: 1rem;
+}
+.pharmacy__prescription__section.open .pharmacy__prescription__detail {
+  height: 250px;
+  border-top: thin solid #dedede;
+}
+.pharmacy__prescription__section.open .pharmacy__prescription__container {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.pharmacy__prescription__section.open .pharmacy__prescription__container::after {
+  transform: rotate(225deg);
+}
+.pharmacy__prescription__container {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0.563rem;
+  padding: 1rem;
+  position: relative;
+}
+.pharmacy__prescription__container::after {
+  content: "";
+  border: solid #008DFF;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 8px;
+  transform: rotate(42deg);
+  transition: transform 0.08s;
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  margin-top: -10px;
+  z-index: 1;
+}
+.pharmacy__prescription__detail {
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.08s;
+  background-color: #ffffff;
+  font-size: 1rem;
+}
+.pharmacy__prescription__detail .prescription__detail__wrapper {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+.pharmacy__prescription__detail .prescription__detail__wrapper b {
+  display: block;
+  color: #008DFF;
+  font-size: 1rem;
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .pharmacy__prescription__detail .prescription__detail__wrapper b {
+    font-size: calc(1rem + (1.2rem - 1rem) * ((100vw - 576px) / (992px - 576px)));
+  }
+}
+@media (min-width: 992px) {
+  .pharmacy__prescription__detail .prescription__detail__wrapper b {
+    font-size: 1.2rem;
+  }
+}
+.pharmacy__prescription__detail .prescription__detail__wrapper p {
+  font-size: 0.8rem;
+}
+.pharmacy__prescription__detail .prescription__detail__wrapper table {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .pharmacy__prescription__detail .prescription__detail__wrapper table tbody {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+}
+.pharmacy__prescription__detail .prescription__detail__wrapper table tr td:first-child {
+  color: #808080;
+  font-weight: normal;
+}
+.pharmacy__prescription__detail .prescription__detail__wrapper table tr td {
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .pharmacy__prescription__detail .prescription__detail__wrapper table tr td {
+    font-size: calc(0.8rem + (1.2rem - 0.8rem) * ((100vw - 576px) / (992px - 576px)));
+  }
+}
+@media (min-width: 992px) {
+  .pharmacy__prescription__detail .prescription__detail__wrapper table tr td {
+    font-size: 1.2rem;
+  }
+}
+.pharmacy__prescription__detail .prescription__detail__wrapper .prescription__date__wrapper {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-color: #E3F3FF;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pharmacy__prescription__detail .prescription__detail__wrapper div:nth-child(3) {
+  grid-column: 1/3;
+}
+.pharmacy__find__section {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0.563rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+.pharmacy__find__section .heading__and__icons__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.pharmacy__find__section .heading__and__icons__wrapper .icons__list__wrapper {
+  width: fit-content;
+}
+.pharmacy__find__section .heading__and__icons__wrapper .icons__list__wrapper ul {
+  display: flex;
+  gap: 0.5rem;
+}
+.pharmacy__find__section .heading__and__icons__wrapper .icons__list__wrapper ul li {
+  border: thin solid #adb5bd;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-left: 0.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .pharmacy__find__section .heading__and__icons__wrapper .icons__list__wrapper ul li {
+    width: fit-content;
+    padding: 1.2rem 1rem;
+  }
+}
+.pharmacy__find__section .heading__and__icons__wrapper .icons__list__wrapper ul li i {
+  color: #808080;
+  font-size: 1.3rem;
+}
+.pharmacy__find__section .heading__and__icons__wrapper .icons__list__wrapper ul li.active {
+  border: thin solid #008DFF;
+}
+.pharmacy__find__section .heading__and__icons__wrapper .icons__list__wrapper ul li.active i {
+  color: #008DFF;
+}
+.pharmacy__find__section .heading__and__icons__wrapper .icons__list__wrapper ul li.active p {
+  margin-left: 0.5rem;
+  color: #008DFF;
+}
+.pharmacy__search__section {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.pharmacy__search__section input {
+  font-size: 0.75rem;
+  padding: 1rem;
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .pharmacy__search__section input {
+    font-size: calc(0.75rem + (1.2rem - 0.75rem) * ((100vw - 576px) / (992px - 576px)));
+  }
+}
+@media (min-width: 992px) {
+  .pharmacy__search__section input {
+    font-size: 1.2rem;
+  }
+}
+.pharmacy__search__section .spinner {
+  display: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  z-index: 1;
+}
+.pharmacy__suggestions__wrapper {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  padding: 1rem 1rem 2rem 1rem;
+  border: thin solid #e9ecef;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  position: absolute;
+  top: unset;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.pharmacy__suggestions__wrapper ul li {
+  border-bottom: thin solid #e9ecef;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .pharmacy__suggestions__wrapper ul li {
+    font-size: calc(0.9rem + (1rem - 0.9rem) * ((100vw - 576px) / (992px - 576px)));
+  }
+}
+@media (min-width: 992px) {
+  .pharmacy__suggestions__wrapper ul li {
+    font-size: 1rem;
+  }
+}
+
+.list__wrapper {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.list__card {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-bottom: thin solid #EAEAEA;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  gap: 1rem;
+}
+@media (min-width: 992px) {
+  .list__card {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 2rem;
+  }
+}
+.list__card__name h3 {
+  font-size: 1.1rem;
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .list__card__name h3 {
+    font-size: calc(1.1rem + (1.2rem - 1.1rem) * ((100vw - 576px) / (992px - 576px)));
+  }
+}
+@media (min-width: 992px) {
+  .list__card__name h3 {
+    font-size: 1.2rem;
+  }
+}
+.list__card__schedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media (min-width: 992px) {
+  .list__card__schedule {
+    display: block;
+  }
+}
+.list__card__schedule span {
+  display: block;
+}
+.list__card__schedule p {
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+@media (min-width: 992px) {
+  .list__card__schedule {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: left;
+  }
+}
+.list__card__schedule .open {
+  color: #28a745;
+}
+.list__card__schedule .closed {
+  color: #F06363;
+}
+.list__card__price {
+  text-align: right;
+}
+@media (min-width: 992px) {
+  .list__card__price {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    text-align: left;
+  }
+}
+.list__card__price b {
+  position: relative;
+  display: block;
+  color: #000000;
+  font-size: 1.5rem;
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .list__card__price b {
+    font-size: calc(1.5rem + (1.6rem - 1.5rem) * ((100vw - 576px) / (992px - 576px)));
+  }
+}
+@media (min-width: 992px) {
+  .list__card__price b {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 992px) {
+  .list__card__price b {
+    width: fit-content;
+    margin-left: 0.5rem;
+  }
+}
+.list__card__price b::after {
+  content: "$";
+  position: absolute;
+  right: 1.7rem;
+  top: 0.3rem;
+  font-weight: normal;
+  font-size: 1.1rem;
+}
+@media (min-width: 992px) {
+  .list__card__price b::after {
+    right: 1.9rem;
+    top: 0.4rem;
+  }
+}
+.list__card__price p {
+  font-size: 0.7rem;
+}
+.list__card__cta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.filter__dropdown__container {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 992px) {
+  .filter__dropdown__container {
+    padding: 2rem;
+  }
+}
+.filter__sorting__wrapper {
+  width: 100%;
+  border-bottom: thin solid #EAEAEA;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.3rem;
+}
+.filter__type__wrapper div {
+  margin: 0.6rem 0;
+  display: grid;
+  grid-template-columns: 1.875rem 9fr;
+}
+.filter__type__wrapper div input[type=checkbox] {
+  margin-right: 1rem;
+  margin-top: 0.4rem;
+}
+.filter__type__wrapper div span p {
+  font-size: 14px;
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .filter__type__wrapper div span p {
+    font-size: calc(14px + (18px - 14px) * ((100vw - 576px) / (992px - 576px)));
+  }
+}
+@media (min-width: 992px) {
+  .filter__type__wrapper div span p {
+    font-size: 18px;
+  }
+}
+.filter__cta__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.map__view {
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .map__view {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+  }
+}
+.map__view .list__wrapper {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  position: absolute;
+  z-index: 1;
+  bottom: 8px;
+  left: 8px;
+}
+@media (min-width: 992px) {
+  .map__view .list__wrapper {
+    max-height: 70vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: static;
+    display: block;
+  }
+}
+.map__view .list__wrapper .list__card {
+  min-width: 90%;
+  margin-right: 3%;
+  border-radius: 8px;
+}
+@media (min-width: 992px) {
+  .map__view .list__wrapper .list__card {
+    margin-bottom: 0.5rem;
+    border-radius: unset;
+  }
+}
+.map__view .map__wrapper {
+  width: 100%;
+  height: 70vh;
+}
+@media (min-width: 992px) {
+  .map__view .map__wrapper {
+    height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .map__view .list__card__schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 992px) {
+  .map__view .list__card__schedule {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .map__view .list__card {
+    padding: 1rem;
+    grid-template-columns: 6fr 4fr !important;
+  }
+}
+.map__view .list__card.active {
+  background-color: #E3F3FF;
+}
+@media (min-width: 992px) {
+  .map__view .list__card__schedule {
+    grid-column-start: unset;
+    grid-row-start: unset;
+  }
+}
+@media (min-width: 992px) {
+  .map__view .list__card__price {
+    grid-column-start: unset;
+    grid-row-start: unset;
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .map__view .list__card__price {
+    grid-column-start: unset;
+    grid-row-start: unset;
+    text-align: right;
+  }
+}
+@media (min-width: 992px) {
+  .map__view .list__card__price p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+@media (min-width: 992px) {
+  .map__view .list__card__price b {
+    width: fit-content;
+    margin-left: 0rem;
+    position: relative;
+    display: block;
+    color: #000000;
+  }
+}
+.map__view .list__card__price b::after {
+  content: "$";
+  position: absolute;
+  right: 1.7rem;
+  top: 0.3rem;
+  font-weight: normal;
+  font-size: 1.1rem;
+}
+@media (min-width: 992px) {
+  .map__view .list__card__price b::after {
+    right: 1.9rem;
+    top: 0.4rem;
+  }
+}
+
+.map__tooltip {
+  padding: 0.1rem;
+  background-color: #ffffff;
+  text-transform: capitalize;
+}
+.map__tooltip p {
+  font-size: 0.7rem;
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .map__tooltip p {
+    font-size: calc(0.7rem + (0.8rem - 0.7rem) * ((100vw - 576px) / (992px - 576px)));
+  }
+}
+@media (min-width: 992px) {
+  .map__tooltip p {
+    font-size: 0.8rem;
+  }
+}
+.map__tooltip .tooltip__title__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: thin solid #EAEAEA;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.map__tooltip .tooltip__title__container b {
+  font-size: 1.2rem;
+}
+.map__tooltip .close__label {
+  color: #F06363;
+}
+.map__tooltip .open__label {
+  color: #28a745;
+}
+
+.custom__largescreen__icon {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  margin-bottom: 1rem;
+  text-align: center;
+  right: 0.5rem !important;
+  top: 0.5rem !important;
+}
+.custom__largescreen__text {
+  color: #000000;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.fullscreen__active {
+  background-color: #f5f7f9;
+}
+@media (min-width: 992px) {
+  .fullscreen__active .map__view {
+    grid-template-columns: 30rem 3fr;
+  }
+}
+@media (min-width: 992px) {
+  .fullscreen__active .map__view .list__wrapper {
+    height: 78vh;
+    max-height: unset;
+  }
+}

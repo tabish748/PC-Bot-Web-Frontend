@@ -1,0 +1,45 @@
+/* colors.scss */
+
+// Primary colors
+$primary: #008DFF;
+$primary-light: lighten($primary, 10%);
+$primary-dark: darken($primary, 10%);
+
+// Secondary colors
+$secondary: #f39c12;
+$secondary-light: lighten($secondary, 10%);
+$secondary-dark: darken($secondary, 10%);
+
+// Tertiary colors
+$tertiary: #9b59b6;
+$tertiary-light: lighten($tertiary, 10%);
+$tertiary-dark: darken($tertiary, 10%);
+
+// Grayscale
+$whiteSmoke:#f5f7f9;
+$white: #ffffff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #808080;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000000;
+
+$light-gray: #EAEAEA;
+$active: #E3F3FF;
+
+// Additional colors (if needed)
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #F06363;
+$danger-light: #FCDDDD;
+$disabled: #DFDFDF;
+// Background colors
+$background: $white;
+$background-light: $whiteSmoke;
+$background-dark: $gray-900;

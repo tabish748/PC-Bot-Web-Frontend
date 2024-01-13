@@ -1,0 +1,65 @@
+@use '../base/colors' as c;
+@import '../base/mixins';
+@import '../base/variables';
+
+.grid {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    gap: 20px;
+
+    &__row-1 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        > div {
+            background-color: c.$white; // Change as per your preference
+            padding: 20px; // Adjust for spacing inside the div
+            border-radius: 4px;
+            h2 {
+                color: c.$gray-700;
+                font-size: 1.3rem;
+            }
+            span {
+                display: block;
+                margin-top: 1.3rem;
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: c.$black;
+            }
+        }
+    }
+
+    &__row-2 {
+        grid-template-columns: 2fr 2fr;
+        display: grid;
+        gap: 20px;
+        &__col-1 {
+            
+            background-color: c.$white; // Change as per your preference
+            padding: 20px; // Adjust for spacing inside the div
+            padding-bottom: 3rem;
+            h2 {
+                color: c.$primary;
+                font-size: 1.4rem;
+                
+            }
+            div {
+                h3 {
+                    color: c.$gray-700;
+                    font-size: 1.3rem;
+                }
+                span {
+                    display: block;
+                    margin-top: 1.2rem;
+                    font-size: 2.2rem;
+                    font-weight: bold;
+                    color: c.$black;
+                }
+            }
+        }
+
+  
+    }
+}
+

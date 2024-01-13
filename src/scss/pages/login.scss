@@ -1,0 +1,39 @@
+
+@use '../base/colors' as c;
+@import '../base/mixins';
+@import '../base/variables';
+
+.login-container {
+    display: flex;
+    height: 100vh;
+
+    &__logo-section {
+        flex: 0 0 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: c.$white; // Any color you like
+
+        &__logo {
+            width: 50%; // You can adjust as per your requirement
+            max-width: 200px;
+        }
+    }
+
+    &__form-section {
+        flex: 0 0 60%;
+        display: flex;
+        justify-content: center ;
+        align-items: flex-start;
+        background-color: c.$primary;
+        flex-direction: column;
+        padding-left: 8rem;
+        .heading__buddy {
+            margin-bottom: 2rem;
+        }
+        .login-form {
+            width: 100%;
+            max-width: 350px;
+        }
+    }
+}

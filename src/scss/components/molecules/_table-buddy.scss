@@ -1,0 +1,40 @@
+table-buddy {
+    display: block;
+    overflow-x: auto; // for horizontal scrolling on small devices
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 16px;
+      text-align: left;
+      border-radius: 5px;
+      
+      thead {
+        background-color: #E8E8E8;
+        color: #333;
+        border-bottom: solid 3px #E8E8E8;
+        tr {
+          &:hover {
+            background-color: #E8E8E8;
+          }
+        }
+  
+        th {
+          padding: 12px 15px;
+        }
+      }
+  
+      tbody {
+        tr {
+            padding: 1rem 0;
+         
+          td {
+            padding: 2rem 15px;
+            border-bottom: 1px solid #dddddd;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,57 @@
+@use '../base/colors' as c;
+@import '../base/mixins';
+.rx__section
+{
+    max-width: 600px;
+    text-align: left;
+    @include respond-to('large') 
+    {
+        text-align: center;
+    }
+    form
+    {
+    .calendar__box{
+        position: relative;
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: auto;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        i
+        {
+            color: c.$gray-500;
+            position: absolute;
+            right: 1rem;
+            top: 2.5rem;
+        }
+    }
+    .icon-timer{
+        color: c.$primary!important;
+    }
+}
+&__left__seconds{
+    color: c.$primary;
+    span{
+     color: c.$primary;
+    }
+ }
+ &__time__container{
+    @include flex-center();
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 10;
+     i{
+         color:c.$primary;
+     }
+ }
+}
+

@@ -1,0 +1,76 @@
+/* colors.scss */ /* variables.scss */ /* mixins.scss */
+.example {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome__section {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 992px) {
+  .welcome__section {
+    padding: 4rem;
+  }
+}
+.welcome__section .row {
+  flex-direction: column-reverse;
+}
+@media (min-width: 992px) {
+  .welcome__section .row {
+    flex-direction: row;
+  }
+}
+.welcome__section__card {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: thin solid #e9ecef;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+@media (min-width: 992px) {
+  .welcome__section__card {
+    padding: 3rem;
+  }
+}
+.welcome__section__card ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+  margin: 1rem 0;
+}
+.welcome__section__card ul li {
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+}
+.welcome__section__card__stores__img__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.welcome__section__card__stores__img__container img {
+  width: 46%;
+}
+@media (min-width: 992px) {
+  .welcome__section__card__stores__img__container img {
+    width: 48%;
+  }
+}
+.welcome__section__card p {
+  margin: 1rem 0;
+}
+.welcome__section__card button {
+  width: 100%;
+}

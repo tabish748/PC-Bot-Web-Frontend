@@ -1,0 +1,67 @@
+@use '../base/colors' as c;
+@import '../base/mixins';
+
+.welcome__section
+{
+    width: 100%;
+    height: auto;
+    @include respond-to('large') 
+    {
+        padding: 4rem;
+    }
+        .row
+        {
+            flex-direction: column-reverse;
+            @include respond-to('large') 
+            {
+                flex-direction: row;
+            }
+        }
+        &__card
+        {
+            width: 100%;
+            height: auto;
+            background-color: c.$background;
+            border-radius: 1rem;
+            border: thin solid c.$gray-200;
+            @include vertical-margin-1;
+            padding: 1rem;
+            @include respond-to('large') 
+            {
+                padding: 3rem;
+            }
+            ul{
+                padding-left: 1rem;
+                list-style-type: disc;
+                @include vertical-margin-1;
+                li{
+                    font-size: 1.15rem;
+                    margin-top: 0.5rem;
+                }
+            }
+            &__stores__img__container{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                margin-top: 2rem;
+                img{
+                    width: 46%;
+                    @include respond-to('large') 
+                    {
+                        width: 48%;
+                    }
+                }
+            }
+            p{
+                @include vertical-margin-1;
+            }
+            button{
+                width: 100%;
+                
+            }
+        }
+    
+}
+
+

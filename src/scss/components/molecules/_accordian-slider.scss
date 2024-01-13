@@ -1,0 +1,38 @@
+.accordion-title {
+    border-bottom: thin solid #dedede;
+    padding: 15px 20px; 
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #333;
+    font-weight: normal;
+    font-size: 1rem;
+    &:hover {
+        background-color: #f0f0f0;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #333; // Arrow color
+        border-right: 2px solid #333; // Arrow color
+        transform: rotate(135deg); // To make it point right
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &.is-open::after {
+        transform: rotate(-45deg); // To rotate the arrow 90 degrees to point upwards when the accordion is open.
+    }
+}
+
+
+.accordion-content {
+    background-color: #fff;
+    padding: 15px 20px;
+    display: none;
+    border-top: 1px solid #ddd;
+}

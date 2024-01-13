@@ -1,0 +1,84 @@
+$submit-btn-padding: 1rem;
+@use '../../base/colors' as c;
+@use '../../base/variables' as v;
+
+button-action
+{
+  .theme__btn{
+    width: fit-content;
+    background-color: whitesmoke;
+    color: c.$primary;
+    padding: $submit-btn-padding;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 9px;
+    @include respond-to('large') {
+      padding: 1.3rem 1rem;
+    }
+    span
+    {
+      color: c.$white;
+    }
+    &--primary {
+      background-color: c.$primary;
+      span{
+        color: c.$white!important;
+      }
+      i{
+        color: c.$white!important;
+      }
+    }
+    &--secondary {
+      border:thin solid c.$primary;
+      background-color: c.$white;
+      span{
+        color: c.$primary!important;
+      }
+      i{
+        color: c.$primary!important;
+      }
+    }
+    &--small {
+      padding: 0.5rem!important;
+      border-radius: v.$border-radius-small;
+      font-size: 1.1rem;
+    }
+    &--medium {
+      padding: 0.5rem 2rem!important;
+      border-radius: v.$border-radius-small;
+      font-size: 1.2rem;
+    }
+  
+  
+    &.secondaryBtn {
+      background-color: c.$black;
+    }
+  
+    &.mediumBtn {
+      padding: $submit-btn-padding !important;
+    }
+  
+    &.smallBtn {
+      padding: 0.4rem 0.8rem !important;
+    }
+  
+    &.largeBtn {
+      padding: 1rem 2.5rem !important;
+    }
+  }
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(359deg);}
+}
+#spinner
+{
+  width: 21px;
+  font-size: 0;
+  animation: spin 1.2s linear infinite;
+}
+.disabled__button{
+  background-color: $disabled!important;
+  color: $white!important;
+}
+

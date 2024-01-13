@@ -1,0 +1,78 @@
+@use '../base/colors' as c;
+@import '../base/mixins';
+@import '../base/variables';
+
+.add__client--section 
+{
+    width: 100%;
+    background-color: c.$white;
+    padding: 1.5rem 0;
+    
+}
+.grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+    &__row 
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    &__input 
+    {
+        // common styles for all input fields
+        border-radius: 4px;
+
+        &--full-width {
+            grid-column: span 3;
+        }
+    }
+}
+
+input {
+    margin: 0!important;
+}
+
+
+.toggle-btns {
+    // display: flex;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden; // To ensure the children button corners don't stick out.
+    width: fit-content;
+    margin-top: 1rem;
+    &__btn {
+        width: fit-content;
+        padding: 15px 25px;
+        border: none;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 14px;
+        border-left: thin solid #dedede;
+        border-right: thin solid #dedede;
+        &:focus {
+            outline: none;
+        }
+
+        &--active {
+            background-color: c.$primary;
+            color: white;
+        }
+    }
+}
+
+#loa_content {
+
+    &.active {
+        display: flex;
+    }
+}
+
+.section__heading {
+    font-size: 1.4rem;
+    color: c.$gray-700;
+    font-weight: normal;
+}
+

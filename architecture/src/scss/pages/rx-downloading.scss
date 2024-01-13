@@ -1,0 +1,13 @@
+@use '../base/colors' as c;
+@import '../base/mixins';
+.rxdownloading
+{
+    &__section{
+        max-width: 600px;
+        text-align: left;
+        @include respond-to('large') 
+        {
+            text-align: center;
+        }
+    }
+}

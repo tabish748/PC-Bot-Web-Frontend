@@ -1,0 +1,14 @@
+export const DOCUMENT_BY_CAT_ID = '/categoryId';
+export const ADD_DOCUMENT = '/add';
+export const UPLOAD_DOC_TEXT = '/upload-doc-by-text';
+export const DOC_ID_BY_NAME = '/id';
+export const DOC_LIST_BY_NAME = '/list';
+export const DATA_BY_DOC_LIST_ID = '/documentData';
+export const DOC_CHILD_USER_LIST = '/childUserList';
+export const DOC_MAKE_PRIMARY = '/makePrimary';
+export const UPLOAD_DOC = '/upload';
+export const GENERATED_DOC = '/generatedDocument';
+export const UPDATE_DOC_DATA = '/updateDocumentData';
+export const DEL_DOC_DATA = '/delDocData';
+export const DOC_DATA_BY_LIST_ID = '/DocumentDataByListId';
+export const DEL_DOC_LIST = '/deleteDocumentList';

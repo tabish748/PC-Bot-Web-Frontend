@@ -1,0 +1,31 @@
+.footer
+{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    display: none;
+    @include respond-to('large') {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+      }
+    &__wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__social__icons__wrapper{
+        width: fit-content;
+        width: fit-content;
+        ul{
+            li {
+                display: inline-block;
+                margin-left: .3rem;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+        }
+    }
+}

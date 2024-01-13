@@ -1,0 +1,102 @@
+.tutorsite-hero-section {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+}
+.tutorsite-hero-section .inner-sec-container {
+  height: 100%;
+}
+.tutorsite-hero-section .hero-sec-container-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tutorsite-hero-section .hero-sec-container-wrapper .content-wrapper {
+  width: 80%;
+  height: auto;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+}
+.tutorsite-hero-section .hero-sec-container-wrapper .content-wrapper .graduation-img {
+  width: 120px;
+  display: block;
+  margin: 20px auto;
+  display: none;
+}
+.tutorsite-hero-section .hero-sec-container-wrapper .content-wrapper .herosec-call-btn {
+  padding: 8px 25px;
+  background-color: #2bd677;
+  color: #fff;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  text-transform: uppercase;
+}
+.tutorsite-hero-section .hero-sec-container-wrapper .content-wrapper h1 {
+  font-size: 3.5vw;
+  color: #fff !important;
+  text-align: center;
+  margin-top: 30px;
+}
+.tutorsite-hero-section .hero-sec-container-wrapper .content-wrapper h1 small {
+  font-size: 22px;
+}
+.tutorsite-hero-section .hero-sec-container-wrapper .content-wrapper .buttons-wrapper {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.tutorsite-hero-section .hero-sec-container-wrapper .content-wrapper .buttons-wrapper .hire-tutor-btn {
+  width: fit-content;
+  padding: 10px 30px;
+  background-color: #2bd677;
+  color: #fff;
+  border-radius: 4px;
+  margin: 0 10px;
+}
+.tutorsite-hero-section .hero-sec-container-wrapper .content-wrapper .buttons-wrapper .download-btn {
+  background-color: #fff !important;
+  color: #2bd677 !important;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-animation: zoomin 10s ease-in infinite;
+  animation: zoomin 38s ease-in infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+.tutorsite-hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.test {
+  background-color: yellow;
+}
